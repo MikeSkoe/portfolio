@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    font-weight: 300;
+    width: 40rem;
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+
+/* -- link -- */
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a::after {
+    font-size: 0.8rem;
+    content: " 🔗";
+}
+
+*::after, *::before, i, skill {
+    color: gray;
+}
+
+
+/* -- section -- */
+
+section {
+    margin: 1rem 0 3rem;
+}
+
+section > name {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+sub-section {
+    display: flex;
+    margin: 0.5rem 0 1rem;
+}
+
+sub-section::before {
+    content: attr(label);
+    min-width: 10rem;
+}
+
+
+/* -- skills -- */
+
+skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+skills > skill + skill::before {
+    content: "·";
+    padding: 0 0.5rem;
+    display: inline-block;
+}
+
+
+/* -- context -- */
+
+context {
+    display: inline-block;
+    min-width: 10rem;
+}
+
+
+/* -- project -- */
+
+project {
+    display: grid;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    grid-template:
+        "logo name"
+        "logo skills" / auto 1fr;
+}
+
+project > name {
+    grid-area: name;
+    margin-bottom: 0.5rem;
+}
+
+project > skills {
+    grid-area: skills;
+}
+
+project > img {
+    margin-right: 1rem;
+    grid-area: logo;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+
+/* -- projects -- */
+
+projects {
+    margin-bottom: 3rem;
+}
+
+projects > name {
+    display: block;
+    margin-bottom: 2rem;
+}
