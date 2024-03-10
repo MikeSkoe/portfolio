@@ -1,0 +1,15 @@
+subsection {
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+subsection::before {
+    content: attr(label);
+    min-width: 10rem;
+}
+
+@media only screen and (max-width: 768px) {
+    subsection {
+        flex-direction: column;
+    }
+}

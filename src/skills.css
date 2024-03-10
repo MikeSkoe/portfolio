@@ -1,0 +1,15 @@
+skill {
+    opacity: 0.5;
+}
+
+skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+skills > skill + skill::before {
+    content: "·";
+    padding: 0 0.5rem;
+    display: inline-block;
+}
+

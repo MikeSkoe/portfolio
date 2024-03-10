@@ -1,0 +1,13 @@
+projects {
+    margin-bottom: 3rem;
+}
+
+projects > name {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+projects > name span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
