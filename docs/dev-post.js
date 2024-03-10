@@ -18,7 +18,13 @@ class DevPost extends HTMLElement {
                 div {
                     display: flex;
                     flex-direction: column;
-                    padding: 1rem 1.5rem 0;
+                    padding: 0.5em 1em 0;
+                }
+
+                @media only screen and (max-width: 768px) {
+                    div {
+                        font-size: 2.5vmin;
+                    }
                 }
 
                 preview {
