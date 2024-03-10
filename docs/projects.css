@@ -3,11 +3,11 @@ projects {
 }
 
 projects > name {
+    line-height: 1.5rem;
     display: block;
     margin-bottom: 2rem;
 }
 
 projects > name span {
-    display: block;
     margin-bottom: 0.5rem;
 }

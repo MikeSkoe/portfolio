@@ -14,6 +14,7 @@ class MyProject extends HTMLElement {
                 }
 
                 name {
+                    font-weight: bold;
                     grid-area: name;
                     margin-bottom: 0.5rem;
                 }
@@ -22,7 +23,8 @@ class MyProject extends HTMLElement {
                     grid-area: skills;
                 }
 
-                div {
+                p {
+                    margin-top: 0.5rem;
                     grid-area: body;
                 }
 
@@ -39,9 +41,7 @@ class MyProject extends HTMLElement {
             <project>
                 <img />
                 <name><slot name="name" /></name>
-                <div>
-                    <slot name="body"></slot>
-                </div>
+                <p></p>
                 <skills><slot name="skills" /></skills>
             </project>
         `;
@@ -51,7 +51,15 @@ class MyProject extends HTMLElement {
     connectedCallback() {
         const clone = MyProject.template.content.cloneNode(true) as HTMLTemplateElement ;
         const img = clone.querySelector('img');
+        const p = clone.querySelector('p');
         const imgSrc = this.getAttribute('src');
+        const description = this.getAttribute('description');
+
+        if (description) {
+            p!.innerText = description;
+        } else {
+            p!.remove();
+        }
 
         if (img && imgSrc) {
             img.src = imgSrc;

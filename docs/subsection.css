@@ -6,6 +6,8 @@ subsection {
 subsection::before {
     content: attr(label);
     min-width: 10rem;
+    opacity: 0.3;
+    line-height: 1.5rem;
 }
 
 @media only screen and (max-width: 768px) {

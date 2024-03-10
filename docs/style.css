@@ -29,7 +29,7 @@ a::after {
     content: " 🔗";
 }
 
-*::after, *::before, i {
+*::after, i {
     opacity: 0.5;
 }
 
